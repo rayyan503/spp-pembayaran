@@ -13,7 +13,7 @@ const Tagihan = () => {
 
   const fetchBills = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/api/v1/treasurer/bills', {
+      const response = await axios.get('https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/treasurer/bills', {
         headers,
       });
       console.log('responseTagihan : ', response)

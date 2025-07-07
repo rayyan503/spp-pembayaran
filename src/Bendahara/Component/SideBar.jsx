@@ -15,7 +15,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       const token = localStorage.getItem("token");
       if (!token) return;
 
-      const res = await axios.get("http://localhost:8080/api/v1/me", {
+      const res = await axios.get("https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/me", {
         headers: {
           Authorization: `Bearer ${token}`
         }

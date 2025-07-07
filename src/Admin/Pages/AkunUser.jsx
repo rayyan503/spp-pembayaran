@@ -13,7 +13,7 @@ const AkunUser = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/api/v1/admin/users', {
+      const response = await axios.get('https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/admin/users', {
         headers,
       });
       setUsers(response.data.data.data); 
@@ -59,7 +59,7 @@ const AkunUser = () => {
 
     if (formValues) {
       try {
-        await axios.post('http://localhost:8080/api/v1/admin/users', formValues, { headers });
+        await axios.post('https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/admin/users', formValues, { headers });
         Swal.fire('Sukses', 'Pengguna berhasil ditambahkan!', 'success');
         fetchUsers();
       } catch (error) {
@@ -97,7 +97,7 @@ const handleEditUser = async (user) => {
 
   if (formValues) {
     try {
-      await axios.put(`http://localhost:8080/api/v1/admin/users/${user.id}`, formValues, { headers });
+      await axios.put(`https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/admin/users/${user.id}`, formValues, { headers });
       Swal.fire('Sukses', 'Data pengguna berhasil diperbarui.', 'success');
       
       fetchUsers(); 
@@ -120,7 +120,7 @@ const handleEditUser = async (user) => {
 
     if (result.isConfirmed) {
       try {
-        await axios.delete(`http://localhost:8080/api/v1/admin/users/${id}`, {
+        await axios.delete(`https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/admin/users/${id}`, {
           headers,
         });
         Swal.fire('Sukses', 'Pengguna berhasil dihapus.', 'success');
