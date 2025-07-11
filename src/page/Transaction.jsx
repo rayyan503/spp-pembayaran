@@ -23,7 +23,7 @@ const Transaction = () => {
 
   const fetchProfile = async () => {
     try {
-      const res = await axios.get("https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/me", { headers });
+      const res = await axios.get("http://localhost:8080/api/v1/me", { headers });
       setSiswa(res.data.data || {});
     } catch (error) {
       console.error("Gagal ambil profil:", error);
@@ -32,7 +32,7 @@ const Transaction = () => {
 
   const fetchTagihan = async () => {
     try {
-      const res = await axios.get("https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/student/bills", {
+      const res = await axios.get("http://localhost:8080/api/v1/student/bills", {
         headers,
       });
       console.log('response Tagihan:', res)
@@ -44,7 +44,7 @@ const Transaction = () => {
 
   const fetchRiwayat = async () => {
     try {
-      const res = await axios.get("https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/student/payment-history", {
+      const res = await axios.get("http://localhost:8080/api/v1/student/payment-history", {
         headers,
       });
       console.log('respon fetchriwayat:', res)
@@ -56,7 +56,7 @@ const Transaction = () => {
 
   const handleBayar = async (id) => {
     try {
-      const res = await axios.post(`https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/student/bills/${id}/pay`, {}, {
+      const res = await axios.post(`http://localhost:8080/api/v1/student/bills/${id}/pay`, {}, {
         headers,
       });
 

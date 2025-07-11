@@ -14,7 +14,7 @@ const Laporan = () => {
   const fetchLaporan = async () => {
     try {
       const res = await axios.get(
-        "https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/treasurer/reports/overall",
+        "http://localhost:8080/api/v1/treasurer/reports/overall",
         { headers }
       );
       setLaporan(res.data.data || []);

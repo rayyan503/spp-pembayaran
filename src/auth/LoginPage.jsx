@@ -28,7 +28,7 @@ const LoginPage = () => {
   }
 
   try {
-    const res = await fetch('https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/login', {
+    const res = await fetch('http://localhost:8080/api/v1/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form),
@@ -41,7 +41,7 @@ const LoginPage = () => {
       localStorage.setItem('token', token);
       localStorage.setItem('isLoggedIn', 'true');
 
-      const profileRes = await fetch('https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/me', {
+      const profileRes = await fetch('http://localhost:8080/api/v1/me', {
         method: 'GET',
         headers: { Authorization: `Bearer ${token}` },
       });

@@ -14,7 +14,7 @@ const Periode = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/treasurer/periods', {
+      const response = await axios.get('http://localhost:8080/api/v1/treasurer/periods', {
         headers,
       });
       console.log('responsePeriode', response)
@@ -87,7 +87,7 @@ const handleTambahperiode = async () => {
 
   if (formValues) {
     try {
-      await axios.post('https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/treasurer/periods', formValues, {
+      await axios.post('http://localhost:8080/api/v1/treasurer/periods', formValues, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -145,7 +145,7 @@ const handleTambahperiode = async () => {
   if (formValues) {
     try {
       await axios.put(
-        `https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/treasurer/periods/${periode.ID}`, 
+        `http://localhost:8080/api/v1/treasurer/periods/${periode.ID}`, 
         formValues,
         { headers }
       );
@@ -169,7 +169,7 @@ const handleTambahperiode = async () => {
 
     if (result.isConfirmed) {
       try {
-        await axios.delete(`https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/treasurer/periods/${id}`, {
+        await axios.delete(`http://localhost:8080/api/v1/treasurer/periods/${id}`, {
           headers,
         });
         Swal.fire('Sukses', 'Data periode berhasil dihapus!', 'success');
@@ -190,7 +190,7 @@ const handleTambahperiode = async () => {
 
   try {
     const response = await axios.post(
-      `https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/treasurer/periods/${id}/generate-bills`,
+      `http://localhost:8080/api/v1/treasurer/periods/${id}/generate-bills`,
       {},
       {
         headers: {
