@@ -13,7 +13,7 @@ const DataSiswa = () => {
   useEffect(() => {
   const fetchKelas = async () => {
     try {
-      const res = await axios.get('http://localhost:8080/api/v1/treasurer/classes', {
+      const res = await axios.get('https://sds-tamanharapan.cloud/api/v1/treasurer/classes', {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
@@ -32,7 +32,7 @@ const DataSiswa = () => {
 
   const fetchData = async () => {
     try {
-      const res = await fetch ("http://localhost:8080/api/v1/treasurer/students", {
+      const res = await fetch ("https://sds-tamanharapan.cloud/api/v1/treasurer/students", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -120,7 +120,7 @@ const DataSiswa = () => {
 
   if (formValues) {
     try {
-      await axios.post('http://localhost:8080/api/v1/treasurer/students', formValues, {
+      await axios.post('https://sds-tamanharapan.cloud/api/v1/treasurer/students', formValues, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json"
@@ -177,7 +177,7 @@ const DataSiswa = () => {
 
   if (formValues) {
     try {
-      const res = await fetch(`http://localhost:8080/api/v1/treasurer/students/${item.id}`, {
+      const res = await fetch(`https://sds-tamanharapan.cloud/api/v1/treasurer/students/${item.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -216,7 +216,7 @@ const handleDelete = async (id) => {
 
   if (confirm.isConfirmed) {
     try {
-      const res = await fetch(`http://localhost:8080/api/v1/treasurer/students/${id}`, {
+      const res = await fetch(`https://sds-tamanharapan.cloud/api/v1/treasurer/students/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

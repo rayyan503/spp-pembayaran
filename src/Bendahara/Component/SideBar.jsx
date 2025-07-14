@@ -15,7 +15,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       const token = localStorage.getItem("token");
       if (!token) return;
 
-      const res = await axios.get("http://localhost:8080/api/v1/me", {
+      const res = await axios.get("https://sds-tamanharapan.cloud/api/v1/me", {
         headers: {
           Authorization: `Bearer ${token}`
         }

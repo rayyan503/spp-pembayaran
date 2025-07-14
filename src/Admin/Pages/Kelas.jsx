@@ -15,7 +15,7 @@ const Kelas = () => {
 useEffect(() => {
   const fetchTingkat = async () => {
     try {
-      const res = await axios.get('https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/admin/class-levels', {
+      const res = await axios.get('https://sds-tamanharapan.cloud/api/v1/admin/class-levels', {
         headers,
       });
       setDaftarTingkat(res.data.data || []);
@@ -29,7 +29,7 @@ useEffect(() => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/treasurer/classes', {
+      const response = await axios.get('https://sds-tamanharapan.cloud/api/v1/treasurer/classes', {
         headers,
       });
       console.log('responseKelas', response)
@@ -84,7 +84,7 @@ const handleTambahKelas = async () => {
 
   if (formValues) {
     try {
-      await axios.post('https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/admin/classes', formValues, {
+      await axios.post('https://sds-tamanharapan.cloud/api/v1/admin/classes', formValues, {
         headers,
       });
       Swal.fire('Sukses', 'Kelas berhasil ditambahkan!', 'success');
@@ -130,7 +130,7 @@ const handleTambahKelas = async () => {
 
   if (formValues) {
     try {
-      await axios.put(`https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/admin/classes/${kelas.id}`, formValues, {
+      await axios.put(`https://sds-tamanharapan.cloud/api/v1/admin/classes/${kelas.id}`, formValues, {
         headers,
       });
       Swal.fire('Sukses', 'Data kelas berhasil diperbarui!', 'success');
@@ -154,7 +154,7 @@ const handleTambahKelas = async () => {
 
     if (result.isConfirmed) {
       try {
-        await axios.delete(`https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/admin/classes/${id}`, {
+        await axios.delete(`https://sds-tamanharapan.cloud/api/v1/admin/classes/${id}`, {
           headers,
         });
         Swal.fire('Sukses', 'Data kelas berhasil dihapus!', 'success');

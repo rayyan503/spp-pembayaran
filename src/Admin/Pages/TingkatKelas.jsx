@@ -11,7 +11,7 @@ const TingkatKelas = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://spp-payment-api-rayyan5038480-05ynou93.leapcell.dev/api/v1/admin/class-levels', {
+      const response = await axios.get('https://sds-tamanharapan.cloud/api/v1/admin/class-levels', {
         headers,
       });
       setKelasList(response.data.data);
