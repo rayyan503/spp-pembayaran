@@ -53,7 +53,7 @@ console.log('res', res)
         ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:static md:inset-0 z-40`}
       >
         <div className="p-4">
-          <h1 className="text-xl font-bold mb-6">Admin SDS Taman Harapan</h1>
+          <h1 className="text-xl font-bold mb-6">Operator SDS Taman Harapan</h1>
 
           {/* Info profil */}
           {profile && (

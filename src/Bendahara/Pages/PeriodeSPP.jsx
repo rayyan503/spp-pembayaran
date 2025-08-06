@@ -48,7 +48,7 @@ const handleTambahperiode = async () => {
   const { value: formValues } = await Swal.fire({
     title: 'Tambah Periode Baru',
     html: `
-      <input id="swal-tahun_ajaran" class="swal2-input" placeholder="Tahun Ajaran (contoh: 2025/2026)" />
+      <input id="swal-tahun_ajaran" class="swal2-input" placeholder="Tahun Ajaran (contoh: 2025)" />
       <input id="swal-nama_bulan" class="swal2-input" placeholder="Nama Bulan (contoh: Juli)" />
       <label style="display:block; margin-top:8px;">Tanggal Mulai</label>
       <input id="swal-tanggal_mulai" class="swal2-input" type="date" />
@@ -72,6 +72,12 @@ const handleTambahperiode = async () => {
 
       if (!tahun_ajaran || !nama_bulan || !tanggal_mulai || !tanggal_selesai || !bulan) {
         Swal.showValidationMessage("Semua field wajib diisi dan nama bulan harus valid");
+        return null;
+      }
+
+      const allowedTahun = "2025";
+      if (tahun_ajaran !== allowedTahun) {
+        Swal.showValidationMessage(`Tahun ajaran hanya boleh ${allowedTahun}`);
         return null;
       }
 

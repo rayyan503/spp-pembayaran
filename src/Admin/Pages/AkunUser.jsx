@@ -34,7 +34,7 @@ const AkunUser = () => {
         <input id="swal-nama" class="swal2-input" placeholder="Nama Lengkap">
         <input id="swal-email" class="swal2-input" placeholder="Email">
         <input id="swal-password" type="password" class="swal2-input" placeholder="Password">
-        <input id="swal-role-id" class="swal2-input" type="number" placeholder="Role ID (contoh: 2)">
+        <input id="swal-role-id" class="swal2-input" type="number" placeholder="Role ID (Contoh: 2=Bendahara)">
       `,
       focusConfirm: false,
       preConfirm: () => {
@@ -141,7 +141,7 @@ const handleEditUser = async (user) => {
           onClick={handleTambahUser}
           className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
         >
-          <FaPlus /> Tambah Akun Admin atau Bendahara
+          <FaPlus /> Tambah Akun Bendahara
         </button>
       </div>
 
