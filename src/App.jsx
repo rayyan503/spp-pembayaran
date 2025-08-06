@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/pembayaran" element={<Transaction />} />
-        <Route path="/admin/*" element={<AdminLayout />} />
+        <Route path="/operator/*" element={<AdminLayout />} />
         <Route path="/bendahara/*" element={<BendaharaLayout />} />
       </Routes>
     </BrowserRouter>
