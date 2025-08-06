@@ -67,7 +67,7 @@ const LoginPage = () => {
       // Redirect setelah 1 detik agar toast terlihat
       setTimeout(() => {
         if (role === 'admin') {
-          navigate('/admin/dashboard');
+          navigate('/operator/dashboard');
         } else if (role === 'bendahara') {
           navigate('/bendahara/dashboard');
         } else if (role === 'siswa') {

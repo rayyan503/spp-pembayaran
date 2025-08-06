@@ -67,22 +67,22 @@ console.log('res', res)
           {/* Menu navigasi */}
           <ul className="space-y-4">
             <li>
-              <Link to="/admin/dashboard" className="flex items-center gap-2 hover:text-yellow-300">
+              <Link to="/operator/dashboard" className="flex items-center gap-2 hover:text-yellow-300">
                 <FaTachometerAlt /> Dashboard
               </Link>
             </li>
              <li>
-              <Link to="/admin/akunuser" className="flex items-center gap-2 hover:text-yellow-300">
+              <Link to="/operator/akunuser" className="flex items-center gap-2 hover:text-yellow-300">
                 <FaUserCog /> Daftar Akun
               </Link>
             </li>
             <li>
-              <Link to="/admin/tingkatkelas" className="flex items-center gap-2 hover:text-yellow-300">
+              <Link to="/operator/tingkatkelas" className="flex items-center gap-2 hover:text-yellow-300">
                 <FaLayerGroup /> Tingkat Kelas
               </Link>
             </li>
              <li>
-              <Link to="/admin/kelas" className="flex items-center gap-2 hover:text-yellow-300">
+              <Link to="/operator/kelas" className="flex items-center gap-2 hover:text-yellow-300">
                 <FaChalkboardTeacher /> Kelas
               </Link>
             </li>
